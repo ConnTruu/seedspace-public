@@ -1,0 +1,108 @@
+/* Base styles */
+:root {
+  --font-heading: 'Share Tech', monospace;
+  --font-body: 'Space Grotesk', sans-serif;
+  --grid-line: rgba(255, 251, 242, 0.08);
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-position: center center;
+  background-attachment: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 100%;
+}
+
+/* For dark mode */
+body.chakra-ui-dark {
+  background-image: 
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.02em;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: visible;
+}
+
+/* Animations & Effects */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Terminal-style caret effect */
+.caret-text::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* High-tech link style */
+a {
+  position: relative;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 8px rgba(255, 251, 242, 0.6);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Tech button styles */
+button {
+  transition: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+/* Global focus styles */
+a:focus, button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 251, 242, 0.5);
+}

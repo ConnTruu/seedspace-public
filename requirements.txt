@@ -1,0 +1,9 @@
+# Core dependencies
+# Add your specific versions as needed, for example:
+# flask==2.0.1
+# requests==2.26.0
+
+# Development dependencies
+pytest
+black
+flake8 

@@ -1,0 +1,41 @@
+/* Seedspace Icons Font */
+@font-face {
+  font-family: 'SeedspaceIcons';
+  src: url('./fonts/seedspace-icons.woff2') format('woff2'),
+       url('./fonts/seedspace-icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.seedspace-icon {
+  /* Base styles for all icons */
+  font-family: 'SeedspaceIcons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Better font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Define individual characters for each icon */
+.icon-burst:before {
+  content: '\e900';
+}
+.icon-one:before {
+  content: '\e901';
+}
+.icon-port:before {
+  content: '\e902';
+}
+.icon-seed:before {
+  content: '\e903';
+}
+.icon-virus:before {
+  content: '\e904';
+} 
